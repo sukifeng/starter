@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     config = function()
       require "configs.conform"
     end,
@@ -46,10 +46,10 @@ return {
         ["<Esc>"] = require("telescope.actions").close,
       }
 
-     -- or 
-     -- table.insert(conf.defaults.mappings.i, your table)
+      -- or
+      -- table.insert(conf.defaults.mappings.i, your table)
 
       return conf
     end,
-  }
+  },
 }
