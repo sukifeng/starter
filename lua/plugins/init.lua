@@ -52,4 +52,13 @@ return {
       return conf
     end,
   },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function()
+      local conf = require "nvchad.configs.cmp"
+      conf.mapping["<C-k>"] = require("cmp").mapping.select_prev_item()
+      conf.mapping["<C-j>"] = require("cmp").mapping.select_next_item()
+      return conf
+    end,
+  },
 }
