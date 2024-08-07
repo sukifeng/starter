@@ -3,13 +3,13 @@ require "nvchad.options"
 -- add yours here!
 
 local o = vim.o
-o.cursorlineopt ='both' -- to enable cursorline!
+o.cursorlineopt = "both" -- to enable cursorline!
 
 if vim.g.neovide then
-    -- vim.o.guifont = "FiraMono Nerd Font:h10"
-    vim.o.guifont = "Hack Nerd Font:h11"
-    vim.g.neovide_profiler = false
-    vim.cmd [[
+  -- vim.o.guifont = "FiraMono Nerd Font:h10"
+  vim.o.guifont = "Hack Nerd Font:h11"
+  vim.g.neovide_profiler = false
+  vim.cmd [[
     "autoread
     autocmd FocusGained * checktime
     ]]
@@ -19,6 +19,8 @@ vim.cmd [[
  autocmd VimEnter * :silent :!e:\\Neovim\\tools\\im-select.exe 1033
 "autocmd InsertEnter * :silent :!e:\\Neovim\\tools\\im-select.exe 2052
  autocmd InsertLeave * :silent :!e:\\Neovim\\tools\\im-select.exe 1033
+"这些文件按q退出
+ autocmd FileType qf,help nnoremap <silent><buffer> q <cmd>close<cr>
 "autocmd VimLeave * :silent :!e:\\Neovim\\tools\\im-select.exe 2052
  "let &shell = executable('pwsh') ? 'pwsh' : 'powershell'
  "let &shellcmdflag = '-NoLogo -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.UTF8Encoding]::new();$PSDefaultParameterValues[''Out-File:Encoding'']=''utf8'';'
