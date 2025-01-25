@@ -4,24 +4,26 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
-  theme = "onedark",
+M.base46 = {
+    theme = "onedark",
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
-  nvdash = {
-    load_on_startup = true,
-  },
-  statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
-    -- default/round/block/arrow separators work only for default statusline theme
-    -- round and block will work for minimal theme only
-    separator_style = "arrow",
-    order = nil,
-    modules = nil,
-  },
+    -- hl_override = {
+    -- 	Comment = { italic = true },
+    -- 	["@comment"] = { italic = true },
+    -- },
+}
+M.ui = {
+    statusline = {
+        theme = "default", -- default/vscode/vscode_colored/minimal
+        -- default/round/block/arrow separators work only for default statusline theme
+        -- round and block will work for minimal theme only
+        separator_style = "arrow",
+        order = nil,
+        modules = nil,
+    },
+}
+M.nvdash = {
+    load_on_startup = true
 }
 
 return M
