@@ -6,10 +6,10 @@ local o = vim.o
 o.cursorlineopt = "both" -- to enable cursorline!
 
 if vim.g.neovide then
-  -- vim.o.guifont = "FiraMono Nerd Font:h10"
-  vim.o.guifont = "Hack Nerd Font:h11"
-  vim.g.neovide_profiler = false
-  vim.cmd [[
+    -- vim.o.guifont = "FiraMono Nerd Font:h10"
+    vim.o.guifont = "Hack Nerd Font:h11"
+    vim.g.neovide_profiler = false
+    vim.cmd [[
     "autoread
     autocmd FocusGained * checktime
     ]]
@@ -41,3 +41,4 @@ vim.o.foldmethod = "indent"
 vim.o.foldlevel = 99
 
 vim.o.relativenumber = true
+vim.o.scrolloff = 8
